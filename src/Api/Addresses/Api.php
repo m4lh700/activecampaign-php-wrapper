@@ -9,15 +9,27 @@ use GuzzleHttp\Client;
  */
 class Addresses
 {
+    /**
+     * @var string
+     */
     protected string $apiUrl;
+    /**
+     * @var string
+     */
     protected string $apiKey;
 
+    /**
+     * @param Object $config
+     */
     public function __construct(Object $config)
     {
         $this->apiUrl = $config->apiUrl;
         $this->apiKey = $config->apiKey;
     }
 
+    /**
+     * @return [type]
+     */
     public function createAddress()
     {
         $client = new Client();
