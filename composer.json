@@ -1,0 +1,21 @@
+{
+    "name": "m4l700/ac-php-wrapper",
+    "description": "A simple wrapper to use the active campaign API",
+    "type": "library",
+    "version": "0.0.1",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "M4l700\\AcPhpWrapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David",
+            "email": "info@netrocket.nl"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.10"
+    }
+}
