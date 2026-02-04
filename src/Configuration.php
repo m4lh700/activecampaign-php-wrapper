@@ -3,6 +3,7 @@
 namespace m4l700\AcPhpWrapper;
 
 use m4l700\AcPhpWrapper\Api\Addresses\Addresses;
+use m4l700\AcPhpWrapper\Api\Lists\Lists;
 
 /**
  * [Description Configuration]
@@ -11,6 +12,7 @@ class Configuration {
     protected string $apiUrl;
     protected string $apiKey;
     public Addresses $addresses;
+    public Lists $lists;
 
     /**
      * @param string $apiUrl
@@ -21,5 +23,6 @@ class Configuration {
         $this->apiKey = $apiKey;
 
         $this->addresses = new Addresses($this);
+        $this->lists = new Lists($this);
     }
 }
