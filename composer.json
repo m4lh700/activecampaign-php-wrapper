@@ -6,7 +6,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "M4l700\\AcPhpWrapper\\": "src/"
+            "m4l700\\AcPhpWrapper\\": "src/"
         }
     },
     "authors": [

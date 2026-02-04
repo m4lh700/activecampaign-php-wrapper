@@ -13,14 +13,14 @@ class ComposerStaticInit7b291f7c2e6dd4069a8fb1bc915c21fd
     );
 
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'm4l700\\AcPhpWrapper\\' => 20,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
-        ),
-        'M' => 
-        array (
-            'M4l700\\AcPhpWrapper\\' => 20,
         ),
         'G' => 
         array (
@@ -31,6 +31,10 @@ class ComposerStaticInit7b291f7c2e6dd4069a8fb1bc915c21fd
     );
 
     public static $prefixDirsPsr4 = array (
+        'm4l700\\AcPhpWrapper\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -39,10 +43,6 @@ class ComposerStaticInit7b291f7c2e6dd4069a8fb1bc915c21fd
         'Psr\\Http\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-client/src',
-        ),
-        'M4l700\\AcPhpWrapper\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
