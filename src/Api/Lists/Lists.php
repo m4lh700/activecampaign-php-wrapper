@@ -6,6 +6,9 @@ use m4l700\AcPhpWrapper\Enums\EndpointEnums;
 use m4l700\AcPhpWrapper\Enums\MethodEnums;
 use m4l700\AcPhpWrapper\Api\Api;
 
+/**
+ * [Description Lists]
+ */
 class Lists extends Api
 {
     /**

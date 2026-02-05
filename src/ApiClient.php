@@ -10,7 +10,7 @@ namespace m4l700\AcPhpWrapper;
  * and processing API responses.
  *
  * @package AcPhpWrapper
- * @author David
+ * @author David Holleman
  * @version 0.0.1
  */
 class ApiClient extends Configuration

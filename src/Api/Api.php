@@ -4,6 +4,16 @@ namespace m4l700\AcPhpWrapper\Api;
 
 use m4l700\AcPhpWrapper\Enums\MethodEnums;
 
+/**
+ * API Wrapper Class
+ * 
+ * This class provides a centralized interface for making HTTP requests to external APIs.
+ * It handles authentication, request building, response parsing, and error handling.
+ * 
+ * @package Ac\PhpWrapper\Api
+ * @author David Holleman
+ * 
+ */
 class Api
 {
     protected string $apiUrl;
