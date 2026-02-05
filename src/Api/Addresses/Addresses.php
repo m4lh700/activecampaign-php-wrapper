@@ -12,11 +12,11 @@ class Addresses
     /**
      * @var string
      */
-    protected string $apiUrl;
+    private string $apiUrl;
     /**
      * @var string
      */
-    protected string $apiKey;
+    private string $apiKey;
 
     /**
      * @param Object $config
