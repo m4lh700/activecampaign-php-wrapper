@@ -16,4 +16,5 @@ class EndpointEnums
     const TEMPLATES = '/api/3/templates';
     const TAGS = '/api/3/tags';
     const BRANDING = '/api/3/brandings';
+    const ECOMMERCE_CUSTOMERS = '/api/3/ecomCustomers';
 }
