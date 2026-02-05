@@ -9,8 +9,8 @@ use m4l700\AcPhpWrapper\Api\Lists\Lists;
  * [Description Configuration]
  */
 class Configuration {
-    protected string $apiUrl;
-    protected string $apiKey;
+    public string $apiUrl;
+    public string $apiKey;
     public Addresses $addresses;
     public Lists $lists;
 

@@ -1,9 +1,11 @@
 <?php
 
 namespace m4l700\AcPhpWrapper\Api\Lists;
-use m4l700\AcPhpWrapper\Enums\EndpointEnums;
 
-class Lists
+use m4l700\AcPhpWrapper\Enums\EndpointEnums;
+use m4l700\AcPhpWrapper\Api\Api;
+
+class Lists extends Api
 {
     /**
      * @var string
@@ -28,21 +30,7 @@ class Lists
      */
     public function getLists(): array
     {
-        $endpoint = EndpointEnums::LISTS;
-        $url = $this->apiUrl . $endpoint;
-
-        $headers = [
-            'Api-Token: ' . $this->apiKey,
-            'Content-Type: application/json',
-        ];
-
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_FORBID_REUSE, TRUE);
-
-        $response = curl_exec($ch);
-
-        return json_decode($response, true);
+        $url = $this->apiUrl . EndpointEnums::LISTS;
+        return $this->connect($url, $this->apiKey);
     }
 }

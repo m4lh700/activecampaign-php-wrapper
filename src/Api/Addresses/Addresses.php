@@ -2,12 +2,13 @@
 
 namespace m4l700\AcPhpWrapper\Api\Addresses;
 
-use GuzzleHttp\Client;
+use m4l700\AcPhpWrapper\Api\Api;
+use m4l700\AcPhpWrapper\Enums\EndpointEnums;
 
 /**
  * [Description Addresses]
  */
-class Addresses
+class Addresses extends Api
 {
     /**
      * @var string
@@ -32,16 +33,7 @@ class Addresses
      */
     public function createAddress()
     {
-        $client = new Client();
-
-        $response = $client->request('POST', $this->apiUrl, [
-        'headers' => [
-            'accept' => 'application/json',
-            'content-type' => 'application/json',
-            'Api-Token' => $this->apiKey,
-        ],
-        ]);
-
-        echo $response->getBody();
+        $url = $this->apiUrl . EndpointEnums::ADDRESSES;
+        return $this->connect($url, $this->apiKey);
     }
 }
