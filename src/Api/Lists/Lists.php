@@ -3,6 +3,7 @@
 namespace m4l700\AcPhpWrapper\Api\Lists;
 
 use m4l700\AcPhpWrapper\Enums\EndpointEnums;
+use m4l700\AcPhpWrapper\Enums\MethodEnums;
 use m4l700\AcPhpWrapper\Api\Api;
 
 class Lists extends Api
@@ -31,6 +32,17 @@ class Lists extends Api
     public function getLists(): array
     {
         $url = $this->apiUrl . EndpointEnums::LISTS;
-        return $this->connect($url, $this->apiKey);
+        return $this->connect(url: $url, apiKey: $this->apiKey);
+    }
+
+    /**
+     * @param array $data
+     * 
+     * @return array
+     */
+    public function createList(array $data): array
+    {
+        $url = $this->apiUrl . EndpointEnums::LISTS;
+        return $this->connect(url: $url, apiKey: $this->apiKey, method: MethodEnums::POST, data: $data);
     }
 }

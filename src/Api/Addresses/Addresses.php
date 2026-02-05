@@ -29,9 +29,9 @@ class Addresses extends Api
     }
 
     /**
-     * @return [type]
+     * @return array
      */
-    public function createAddress()
+    public function createAddress(): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES;
         return $this->connect($url, $this->apiKey);
