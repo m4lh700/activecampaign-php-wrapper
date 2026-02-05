@@ -9,21 +9,6 @@ use m4l700\AcPhpWrapper\Enums\MethodEnums;
 class Contacts extends Api
 {
     /**
-     * @var string
-     */
-    private string $apiUrl;
-    /**
-     * @var string
-     */
-    private string $apiKey;
-
-    public function __construct(Object $config)
-    {
-        $this->apiUrl = $config->apiUrl;
-        $this->apiKey = $config->apiKey;
-    }
-
-    /**
      * @return array
      */
     public function getContacts(): array

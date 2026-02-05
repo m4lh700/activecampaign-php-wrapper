@@ -13,16 +13,20 @@ class Api
      * @param array|null $data
      * 
      * @return array
+     * @throws \Exception
      */
     public function connect(string $url, string $apiKey, $method = MethodEnums::GET, $data = null): array
     {
-        // Connection logic here
         $headers = [
             'Api-Token: ' . $apiKey,
             'Content-Type: application/json',
         ];
 
         $ch = curl_init($url);
+        if ($ch === false) {
+            throw new \Exception('Failed to initialize cURL');
+        }
+
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_FORBID_REUSE, TRUE);

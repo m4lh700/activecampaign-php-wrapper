@@ -17,7 +17,7 @@ class Accounts extends Api
      */
     private string $apiKey;
 
-    public function __construct(Object $config)
+    public function __construct(object $config)
     {
         $this->apiUrl = $config->apiUrl;
         $this->apiKey = $config->apiKey;
