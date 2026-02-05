@@ -4,8 +4,11 @@ namespace m4l700\AcPhpWrapper;
 
 use m4l700\AcPhpWrapper\Api\Accounts\Accounts;
 use m4l700\AcPhpWrapper\Api\Addresses\Addresses;
+use m4l700\AcPhpWrapper\Api\Branding\Branding;
 use m4l700\AcPhpWrapper\Api\Lists\Lists;
 use m4l700\AcPhpWrapper\Api\Contacts\Contacts;
+use m4l700\AcPhpWrapper\Api\Templates\Templates;
+use m4l700\AcPhpWrapper\Api\EcommerceCustomer\EcommerceCustomer;
 
 /**
  * Configuration class for managing application settings, parameters and properties.
@@ -22,6 +25,9 @@ class Configuration {
     public Lists $lists;
     public Contacts $contacts;
     public Accounts $accounts;
+    public EcommerceCustomer $ecommerceCustomer;
+    public Templates $templates;
+    public Branding $branding;
 
     /**
      * @param string $apiUrl
@@ -35,5 +41,8 @@ class Configuration {
         $this->lists = new Lists($this);
         $this->contacts = new Contacts($this);
         $this->accounts = new Accounts($this);
+        $this->ecommerceCustomer = new EcommerceCustomer($this);
+        $this->templates = new Templates($this);
+        $this->branding = new Branding($this);
     }
 }
