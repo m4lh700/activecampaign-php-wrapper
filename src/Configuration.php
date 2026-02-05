@@ -19,7 +19,7 @@ class Configuration {
      * @param string $apiKey
      */
     public function __construct(string $apiUrl, string $apiKey) {
-        $this->apiUrl = rtrim($apiUrl, '/');
+        $this->apiUrl = $apiUrl;
         $this->apiKey = $apiKey;
 
         $this->addresses = new Addresses($this);

@@ -1,6 +1,7 @@
 <?php
 
 namespace m4l700\AcPhpWrapper\Api\Lists;
+use m4l700\AcPhpWrapper\Enums\EndpointEnums;
 
 class Lists
 {
@@ -27,7 +28,7 @@ class Lists
      */
     public function getLists(): array
     {
-        $endpoint = '/api/3/lists';
+        $endpoint = EndpointEnums::LISTS;
         $url = $this->apiUrl . $endpoint;
 
         $headers = [
