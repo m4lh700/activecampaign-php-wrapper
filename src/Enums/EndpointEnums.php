@@ -14,4 +14,6 @@ class EndpointEnums
     const CONTACT_LOGS = '/contactLogs';
     const CONTACT_FIELD_VALUES = '/fieldValues';
     const TEMPLATES = '/api/3/templates';
+    const TAGS = '/api/3/tags';
+    const BRANDING = '/api/3/brandings';
 }
