@@ -17,6 +17,6 @@ class Addresses extends Api
     public function createAddress(): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES;
-        return $this->connect(url: $url, apiKey: $this->apiKey, method: MethodEnums::POST);
+        return $this->connect(url: $url, method: MethodEnums::POST);
     }
 }

@@ -3,10 +3,18 @@
 namespace m4l700\AcPhpWrapper;
 
 /**
- * [Description ApiClient]
+ * ApiClient
+ *
+ * Handles HTTP requests and communication with external APIs.
+ * Provides methods for making API calls, managing authentication,
+ * and processing API responses.
+ *
+ * @package AcPhpWrapper
  * @author David
+ * @version 0.0.1
  */
-class ApiClient extends Configuration {
+class ApiClient extends Configuration
+{
     /**
      * @param string $apiUrl
      * @param string $apiKey

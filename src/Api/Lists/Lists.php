@@ -14,17 +14,17 @@ class Lists extends Api
     public function getLists(): array
     {
         $url = $this->apiUrl . EndpointEnums::LISTS;
-        return $this->connect(url: $url, apiKey: $this->apiKey);
+        return $this->connect(url: $url);
     }
 
     /**
      * @param array $data
-     * 
+     *
      * @return array
      */
     public function createList(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::LISTS;
-        return $this->connect(url: $url, apiKey: $this->apiKey, method: MethodEnums::POST, data: $data);
+        return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
     }
 }

@@ -14,28 +14,28 @@ class Contacts extends Api
     public function getContacts(): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS;
-        return $this->connect(url: $url, apiKey: $this->apiKey);
+        return $this->connect(url: $url);
     }
 
     /**
      * @param int $contactId
-     * 
+     *
      * @return array
      */
     public function getContact(int $contactId): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS . '/' . $contactId;
-        return $this->connect(url: $url, apiKey: $this->apiKey);
+        return $this->connect(url: $url);
     }
 
     /**
      * @param array $data
-     * 
+     *
      * @return array
      */
     public function createContact(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS;
-        return $this->connect(url: $url, apiKey: $this->apiKey, method: MethodEnums::POST, data: $data);
+        return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
     }
 }

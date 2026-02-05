@@ -6,19 +6,27 @@ use m4l700\AcPhpWrapper\Enums\MethodEnums;
 
 class Api
 {
+    protected string $apiUrl;
+    protected string $apiKey;
+
+    public function __construct(object $config)
+    {
+        $this->apiUrl = $config->apiUrl;
+        $this->apiKey = $config->apiKey;
+    }
+
     /**
      * @param string $url
-     * @param string $apiKey
      * @param string $method
      * @param array|null $data
-     * 
+     *
      * @return array
      * @throws \Exception
      */
-    public function connect(string $url, string $apiKey, $method = MethodEnums::GET, $data = null): array
+    public function connect(string $url, $method = MethodEnums::GET, $data = null): array
     {
         $headers = [
-            'Api-Token: ' . $apiKey,
+            'Api-Token: ' . $this->apiKey,
             'Content-Type: application/json',
         ];
 
