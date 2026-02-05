@@ -15,8 +15,5 @@
             "email": "info@netrocket.nl"
         }
     ],
-    "require": {
-        "guzzlehttp/guzzle": "^7.10"
-    },
     "minimum-stability": "dev"
 }
