@@ -3,21 +3,24 @@
 namespace m4l700\AcPhpWrapper\Api\Ecommerce;
 
 use m4l700\AcPhpWrapper\Api\Api;
-use m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceConnections\EcommerceConnections;
-use m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceCustomers\EcommerceCustomers;
-use m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceOrders\EcommerceOrders;
+use m4l700\AcPhpWrapper\Api\Ecommerce\Connections\Connections;
+use m4l700\AcPhpWrapper\Api\Ecommerce\Customers\Customers;
+use m4l700\AcPhpWrapper\Api\Ecommerce\Orders\Orders;
+use m4l700\AcPhpWrapper\Api\Ecommerce\Products\Products;
 
 class Ecommerce extends Api
 {
-    public EcommerceCustomers $customers;
-    public EcommerceConnections $connections;
-    public EcommerceOrders $orders;
+    public Customers $customers;
+    public Connections $connections;
+    public Orders $orders;
+    public Products $products;
 
     public function __construct(object $config)
     {
         parent::__construct($config);
-        $this->customers = new EcommerceCustomers($this);
-        $this->connections = new EcommerceConnections($this);
-        $this->orders = new EcommerceOrders($this);
+        $this->customers = new Customers($this);
+        $this->connections = new Connections($this);
+        $this->orders = new Orders($this);
+        $this->products = new Products($this);
     }
 }

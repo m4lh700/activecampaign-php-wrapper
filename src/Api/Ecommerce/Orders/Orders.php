@@ -1,6 +1,6 @@
 <?php
 
-namespace m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceOrders;
+namespace m4l700\AcPhpWrapper\Api\Ecommerce\Orders;
 
 use m4l700\AcPhpWrapper\Api\Api;
 use m4l700\AcPhpWrapper\Enums\EndpointEnums;
@@ -15,7 +15,7 @@ use m4l700\AcPhpWrapper\Enums\MethodEnums;
  *
  * @author David Holleman
  */
-class EcommerceOrders extends Api
+class Orders extends Api
 {
    /**
      * @param int $orderId

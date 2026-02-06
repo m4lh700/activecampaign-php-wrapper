@@ -27,4 +27,5 @@ class EndpointEnums
     const CAMPAIGNS_LINKS = '/links';
     const ECOMMERCE_ORDERS = '/api/'.self::API_VERSION.'/ecomOrders';
     const ECOMMERCE_CONNECTIONS = '/api/'.self::API_VERSION.'/connections';
+    const ECOMMERCE_PRODUCTS = '/api/'.self::API_VERSION.'/ecomOrderProducts';
 }

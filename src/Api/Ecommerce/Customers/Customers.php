@@ -1,6 +1,6 @@
 <?php
 
-namespace m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceCustomers;
+namespace m4l700\AcPhpWrapper\Api\Ecommerce\Customers;
 
 use m4l700\AcPhpWrapper\Api\Api;
 use m4l700\AcPhpWrapper\Enums\EndpointEnums;
@@ -9,7 +9,7 @@ use m4l700\AcPhpWrapper\Enums\MethodEnums;
 /**
  * [Description EcommerceCustomers]
  */
-class EcommerceCustomers extends Api
+class Customers extends Api
 {
     /**
      * @param int $customerId

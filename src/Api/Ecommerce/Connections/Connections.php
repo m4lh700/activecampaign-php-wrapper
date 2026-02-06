@@ -1,12 +1,12 @@
 <?php
 
-namespace m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceConnections;
+namespace m4l700\AcPhpWrapper\Api\Ecommerce\Connections;
 
 use m4l700\AcPhpWrapper\Api\Api;
 use m4l700\AcPhpWrapper\Enums\EndpointEnums;
 use m4l700\AcPhpWrapper\Enums\MethodEnums;
 
-class EcommerceConnections extends Api
+class Connections extends Api
 {
     /**
      * Get a connection based on a given connection ID
