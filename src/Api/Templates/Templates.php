@@ -15,7 +15,7 @@ class Templates extends Api
      * 
      * @return array
      */
-    public function getTemplate(int $templateId): array
+    public function getById(int $templateId): array
     {
         $url = $this->apiUrl . EndpointEnums::TEMPLATES . '/' . $templateId;
         return $this->connect(url: $url);

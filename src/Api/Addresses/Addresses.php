@@ -14,7 +14,7 @@ class Addresses extends Api
     /**
      * @return array
      */
-    public function getAddresses(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES;
         return $this->connect(url: $url);
@@ -25,7 +25,7 @@ class Addresses extends Api
      * 
      * @return array
      */
-    public function createAddress(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -36,7 +36,7 @@ class Addresses extends Api
      * 
      * @return array
      */
-    public function getAddress(int $addressId): array
+    public function getById(int $addressId): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES . '/' . $addressId;
         return $this->connect(url: $url);
@@ -47,7 +47,7 @@ class Addresses extends Api
      * 
      * @return array
      */
-    public function updateAddress(int $addressId, array $data): array
+    public function update(int $addressId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES . '/' . $addressId;
         return $this->connect(url: $url, method: MethodEnums::PUT , data: $data);
@@ -58,7 +58,7 @@ class Addresses extends Api
      * 
      * @return array
      */
-    public function deleteAddress(int $addressId): array
+    public function delete(int $addressId): array
     {
         $url = $this->apiUrl . EndpointEnums::ADDRESSES . '/' . $addressId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);

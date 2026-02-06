@@ -14,7 +14,7 @@ class Branding extends Api
     /**
      * @return array
      */
-    public function getBrandings(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::BRANDING;
         return $this->connect(url: $url);
@@ -25,7 +25,7 @@ class Branding extends Api
      * 
      * @return array
      */
-    public function getBranding(int $brandingId): array
+    public function getById(int $brandingId): array
     {
         $url = $this->apiUrl . EndpointEnums::BRANDING . '/' . $brandingId;
         return $this->connect(url: $url);
@@ -37,7 +37,7 @@ class Branding extends Api
      * 
      * @return array
      */
-    public function updateBranding(int $brandingId, array $data): array
+    public function update(int $brandingId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::BRANDING . '/' . $brandingId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);

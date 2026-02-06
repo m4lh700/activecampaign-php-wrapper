@@ -20,7 +20,7 @@ class Campaigns extends Api
     /**
      * @return array
      */
-    public function getCampaigns(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::CAMPAIGNS;
         return $this->connect(url: $url);
@@ -31,7 +31,7 @@ class Campaigns extends Api
      * 
      * @return array
      */
-    public function getCampaign(int $campaignId): array
+    public function getById(int $campaignId): array
     {
         $url = $this->apiUrl . EndpointEnums::CAMPAIGNS . '/' . $campaignId;
         return $this->connect(url: $url);
@@ -108,7 +108,7 @@ class Campaigns extends Api
      * 
      * @return array
      */
-    public function createCampaign(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::CAMPAIGNS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -120,7 +120,7 @@ class Campaigns extends Api
      * 
      * @return array
      */
-    public function updateCampaign(int $campaignId, array $data): array
+    public function update(int $campaignId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::CAMPAIGNS . '/' . $campaignId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);

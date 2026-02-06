@@ -11,7 +11,7 @@ class Tags extends Api
     /**
      * @return array
      */
-    public function getTags(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::TAGS;
         return $this->connect(url: $url);
@@ -22,7 +22,7 @@ class Tags extends Api
      * 
      * @return array
      */
-    public function getTag(int $tagId): array
+    public function getById(int $tagId): array
     {
         $url = $this->apiUrl . EndpointEnums::TAGS . '/' . $tagId;
         return $this->connect(url: $url);
@@ -33,7 +33,7 @@ class Tags extends Api
      * 
      * @return array
      */
-    public function createTag(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::TAGS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -45,7 +45,7 @@ class Tags extends Api
      * 
      * @return array
      */
-    public function updateTag(int $tagId, array $data): array
+    public function update(int $tagId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::TAGS . '/' . $tagId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);

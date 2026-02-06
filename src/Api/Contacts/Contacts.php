@@ -14,7 +14,7 @@ class Contacts extends Api
     /**
      * @return array
      */
-    public function getContacts(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS;
         return $this->connect(url: $url);
@@ -25,7 +25,7 @@ class Contacts extends Api
      *
      * @return array
      */
-    public function getContact(int $contactId): array
+    public function getById(int $contactId): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS . '/' . $contactId;
         return $this->connect(url: $url);
@@ -36,7 +36,7 @@ class Contacts extends Api
      *
      * @return array
      */
-    public function createContact(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -48,7 +48,7 @@ class Contacts extends Api
      * 
      * @return array
      */
-    public function updateContact(int $contactId, array $data): array
+    public function update(int $contactId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS . '/' . $contactId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);
@@ -59,7 +59,7 @@ class Contacts extends Api
      * 
      * @return array
      */
-    public function deleteContact(int $contactId): array
+    public function delete(int $contactId): array
     {
         $url = $this->apiUrl . EndpointEnums::CONTACTS . '/' . $contactId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);

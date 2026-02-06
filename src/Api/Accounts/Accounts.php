@@ -14,7 +14,7 @@ class Accounts extends Api
     /**
      * @return array
      */
-    public function getAccounts(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS;
         return $this->connect(url: $url);
@@ -25,7 +25,7 @@ class Accounts extends Api
      *
      * @return array
      */
-    public function getAccount(int $accountId): array
+    public function getById(int $accountId): array
     {
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS . '/' . $accountId;
         return $this->connect(url: $url);
@@ -36,7 +36,7 @@ class Accounts extends Api
      *
      * @return array
      */
-    public function createAccount(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -47,7 +47,7 @@ class Accounts extends Api
      * 
      * @return array
      */
-    public function deleteAccount(int $accountId): array
+    public function delete(int $accountId): array
     {
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS . '/' . $accountId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);
@@ -59,7 +59,7 @@ class Accounts extends Api
      * 
      * @return array
      */
-    public function updateAccount(int $accountId, array $data): array
+    public function update(int $accountId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS . '/' . $accountId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);

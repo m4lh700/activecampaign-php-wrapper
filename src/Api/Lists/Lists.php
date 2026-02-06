@@ -14,7 +14,7 @@ class Lists extends Api
     /**
      * @return array
      */
-    public function getLists(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::LISTS;
         return $this->connect(url: $url);
@@ -25,7 +25,7 @@ class Lists extends Api
      *
      * @return array
      */
-    public function createList(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::LISTS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
