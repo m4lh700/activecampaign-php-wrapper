@@ -19,7 +19,7 @@ class EcommerceCustomers extends Api
      * 
      * @return array
      */
-    public function createEcommerceCustomer(int $connectionId, int $externalId, string $email, bool $acceptsMarketing = true): array
+    public function create(int $connectionId, int $externalId, string $email, bool $acceptsMarketing = true): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CUSTOMERS;
 
@@ -36,20 +36,24 @@ class EcommerceCustomers extends Api
     }
 
     /**
+     * Get customer by ID
+     * 
      * @param int $customerId
      * 
      * @return array
      */
-    public function getEcommerceCustomer(int $customerId): array
+    public function getById(int $customerId): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CUSTOMERS . '/' . $customerId;
         return $this->connect(url: $url);
     }
 
     /**
+     * Get all customers
+     * 
      * @return array
      */
-    public function getEcommerceCustomers(): array
+    public function get(): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CUSTOMERS;
         return $this->connect(url: $url);
@@ -61,7 +65,7 @@ class EcommerceCustomers extends Api
      * 
      * @return array
      */
-    public function updateEcommerceCustomer(int $customerId, array $data): array
+    public function update(int $customerId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CUSTOMERS . '/' . $customerId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);
@@ -72,7 +76,7 @@ class EcommerceCustomers extends Api
      * 
      * @return array
      */
-    public function deleteEcommerceCustomer(int $customerId): array
+    public function delete(int $customerId): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CUSTOMERS . '/' . $customerId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);

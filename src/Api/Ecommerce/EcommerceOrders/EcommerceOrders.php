@@ -22,7 +22,7 @@ class EcommerceOrders extends Api
      *
      * @return array
      */
-    public function getEcommerceOrder(int $orderId): array
+    public function getById(int $orderId): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_ORDERS . '/' . $orderId;
         return $this->connect(url: $url);
@@ -33,7 +33,7 @@ class EcommerceOrders extends Api
      * 
      * @return array
      */
-    public function createEcommerceOrder(array $data): array
+    public function create(array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_ORDERS;
         return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
@@ -45,7 +45,7 @@ class EcommerceOrders extends Api
      * 
      * @return array
      */
-    public function updateEcommerceOrder(int $orderId, array $data): array
+    public function update(int $orderId, array $data): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_ORDERS . '/' . $orderId;
         return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);
@@ -56,7 +56,7 @@ class EcommerceOrders extends Api
      * 
      * @return array
      */
-    public function deleteEcommerceOrder(int $orderId): array
+    public function delete(int $orderId): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_ORDERS . '/' . $orderId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);
