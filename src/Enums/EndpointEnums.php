@@ -23,4 +23,5 @@ class EndpointEnums
     const CAMPAIGNS_MESSAGES = '/campaignMessages';
     const CAMPAIGNS_MESSAGE = '/campaignMessage';
     const CAMPAIGNS_LINKS = '/links';
+    const ECOMMERCE_ORDERS = '/api/3/ecomOrders';
 }
