@@ -13,6 +13,7 @@ use m4l700\AcPhpWrapper\Api\Templates\Templates;
 use m4l700\AcPhpWrapper\Api\EcommerceCustomers\EcommerceCustomers;
 use m4l700\AcPhpWrapper\Api\EcommerceOrders\EcommerceOrders;
 use m4l700\AcPhpWrapper\Api\Tags\Tags;
+use m4l700\AcPhpWrapper\Api\Ecommerce\Ecommerce;
 
 /**
  * Configuration class for managing application settings, parameters and properties.
@@ -29,9 +30,7 @@ class Configuration {
     public Lists $lists;
     public Contacts $contacts;
     public Accounts $accounts;
-    public EcommerceCustomers $ecommerceCustomers;
-    public EcommerceOrders $ecommerceOrders;
-    public EcommerceConnections $ecommerceConnections;
+    public Ecommerce $ecommerce;
     public Templates $templates;
     public Branding $branding;
     public Campaigns $campaigns;
@@ -49,9 +48,7 @@ class Configuration {
         $this->lists = new Lists($this);
         $this->contacts = new Contacts($this);
         $this->accounts = new Accounts($this);
-        $this->ecommerceCustomers = new EcommerceCustomers($this);
-        $this->ecommerceOrders = new EcommerceOrders($this);
-        $this->ecommerceConnections = new EcommerceConnections($this);
+        $this->ecommerce = new Ecommerce($this);
         $this->templates = new Templates($this);
         $this->branding = new Branding($this);
         $this->campaigns = new Campaigns($this);

@@ -1,6 +1,6 @@
 <?php
 
-namespace m4l700\AcPhpWrapper\Api\EcommerceConnections;
+namespace m4l700\AcPhpWrapper\Api\Ecommerce\EcommerceConnections;
 
 use m4l700\AcPhpWrapper\Api\Api;
 use m4l700\AcPhpWrapper\Enums\EndpointEnums;
