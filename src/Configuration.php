@@ -8,10 +8,7 @@ use m4l700\AcPhpWrapper\Api\Branding\Branding;
 use m4l700\AcPhpWrapper\Api\Campaigns\Campaigns;
 use m4l700\AcPhpWrapper\Api\Lists\Lists;
 use m4l700\AcPhpWrapper\Api\Contacts\Contacts;
-use m4l700\AcPhpWrapper\Api\EcommerceConnections\EcommerceConnections;
 use m4l700\AcPhpWrapper\Api\Templates\Templates;
-use m4l700\AcPhpWrapper\Api\EcommerceCustomers\EcommerceCustomers;
-use m4l700\AcPhpWrapper\Api\EcommerceOrders\EcommerceOrders;
 use m4l700\AcPhpWrapper\Api\Tags\Tags;
 use m4l700\AcPhpWrapper\Api\Ecommerce\Ecommerce;
 
