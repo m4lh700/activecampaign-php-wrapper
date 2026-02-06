@@ -17,4 +17,10 @@ class EndpointEnums
     const TAGS = '/api/3/tags';
     const BRANDING = '/api/3/brandings';
     const ECOMMERCE_CUSTOMERS = '/api/3/ecomCustomers';
+    const CAMPAIGNS = '/api/3/campaigns';
+    const CAMPAIGNS_USER = '/user';
+    const CAMPAIGNS_AUTOMATION = '/automation';
+    const CAMPAIGNS_MESSAGES = '/campaignMessages';
+    const CAMPAIGNS_MESSAGE = '/campaignMessage';
+    const CAMPAIGNS_LINKS = '/links';
 }

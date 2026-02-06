@@ -78,6 +78,17 @@ class Contacts extends Api
 
     /**
      * @param int $contactId
+     * 
+     * @return array
+     */
+    public function getContactTag(int $contactId): array
+    {
+        $url = $this->apiUrl . EndpointEnums::CONTACTS . '/' . $contactId . EndpointEnums::CONTACT_TAGS;
+        return $this->connect(url: $url);
+    }
+
+    /**
+     * @param int $contactId
      * @param int $tagId
      * 
      * @return array

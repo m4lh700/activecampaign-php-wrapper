@@ -5,6 +5,7 @@ namespace m4l700\AcPhpWrapper;
 use m4l700\AcPhpWrapper\Api\Accounts\Accounts;
 use m4l700\AcPhpWrapper\Api\Addresses\Addresses;
 use m4l700\AcPhpWrapper\Api\Branding\Branding;
+use m4l700\AcPhpWrapper\Api\Campaigns\Campaigns;
 use m4l700\AcPhpWrapper\Api\Lists\Lists;
 use m4l700\AcPhpWrapper\Api\Contacts\Contacts;
 use m4l700\AcPhpWrapper\Api\Templates\Templates;
@@ -28,6 +29,7 @@ class Configuration {
     public EcommerceCustomer $ecommerceCustomer;
     public Templates $templates;
     public Branding $branding;
+    public Campaigns $campaigns;
 
     /**
      * @param string $apiUrl
@@ -44,5 +46,6 @@ class Configuration {
         $this->ecommerceCustomer = new EcommerceCustomer($this);
         $this->templates = new Templates($this);
         $this->branding = new Branding($this);
+        $this->campaigns = new Campaigns($this);
     }
 }

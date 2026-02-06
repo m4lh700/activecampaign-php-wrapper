@@ -52,5 +52,17 @@ class Accounts extends Api
         $url = $this->apiUrl . EndpointEnums::ACCOUNTS . '/' . $accountId;
         return $this->connect(url: $url, method: MethodEnums::DELETE);
     }
+
+    /**
+     * @param int $accountId
+     * @param array $data
+     * 
+     * @return array
+     */
+    public function updateAccount(int $accountId, array $data): array
+    {
+        $url = $this->apiUrl . EndpointEnums::ACCOUNTS . '/' . $accountId;
+        return $this->connect(url: $url, method: MethodEnums::PUT, data: $data);
+    }   
     
 }
