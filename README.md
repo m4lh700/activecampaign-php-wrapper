@@ -42,7 +42,7 @@ $accounts = $client->accounts->get();
 $account = $client->accounts->getById(12345);
 
 // Create a new account
-$account = $client->accounts->createAccount(data: [
+$account = $client->accounts->create(data: [
     'account' => [
         'name' => 'Account Name',
         'accountUrl' => 'https://example.com'
@@ -60,7 +60,7 @@ $contacts = $client->contacts->get();
 $contact = $client->contacts->getById(12345);
 
 // Create a new contact
-$contact = $client->contacts->createContact(data: [
+$contact = $client->contacts->create(data: [
     'contact' => [
         'email' => 'john@example.com',
         'firstName' => 'John',
@@ -77,7 +77,7 @@ $contact = $client->contacts->createContact(data: [
 $lists = $client->lists->get();
 
 // Create a new list
-$list = $client->lists->createList(data: [
+$list = $client->lists->create(data: [
     'list' => [
         'name' => 'My List',
         'stringid' => 'my-list',
@@ -91,7 +91,7 @@ $list = $client->lists->createList(data: [
 
 ```php
 // Create a new address
-$address = $client->addresses->createAddress();
+$address = $client->addresses->create();
 ```
 
 #### Ecommerce
@@ -273,7 +273,7 @@ $client->messages->delete(12345);
 |--------|------------|-------------|
 | `get()` | none | Retrieve all accounts |
 | `getById(int $accountId)` | `$accountId` - Account ID | Retrieve a single account |
-| `createAccount(array $data)` | `$data` - Account data array | Create a new account |
+| `create(array $data)` | `$data` - Account data array | Create a new account |
 
 ### Contacts
 
@@ -281,20 +281,20 @@ $client->messages->delete(12345);
 |--------|------------|-------------|
 | `get()` | none | Retrieve all contacts |
 | `getById(int $contactId)` | `$contactId` - Contact ID | Retrieve a single contact |
-| `createContact(array $data)` | `$data` - Contact data array | Create a new contact |
+| `create(array $data)` | `$data` - Contact data array | Create a new contact |
 
 ### Lists
 
 | Method | Parameters | Description |
 |--------|------------|-------------|
 | `get()` | none | Retrieve all lists |
-| `createList(array $data)` | `$data` - List data array | Create a new list |
+| `create(array $data)` | `$data` - List data array | Create a new list |
 
 ### Addresses
 
 | Method | Parameters | Description |
 |--------|------------|-------------|
-| `createAddress()` | none | Create a new address |
+| `create()` | none | Create a new address |
 
 ### Ecommerce
 
