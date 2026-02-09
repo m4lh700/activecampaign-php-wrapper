@@ -4,6 +4,7 @@ namespace m4l700\AcPhpWrapper;
 
 use m4l700\AcPhpWrapper\Api\Accounts\Accounts;
 use m4l700\AcPhpWrapper\Api\Addresses\Addresses;
+use m4l700\AcPhpWrapper\Api\Automations\Automations;
 use m4l700\AcPhpWrapper\Api\Branding\Branding;
 use m4l700\AcPhpWrapper\Api\Campaigns\Campaigns;
 use m4l700\AcPhpWrapper\Api\Lists\Lists;
@@ -32,6 +33,7 @@ class Configuration {
     public Branding $branding;
     public Campaigns $campaigns;
     public Tags $tags;
+    public Automations $automations;
 
     /**
      * @param string $apiUrl
@@ -50,5 +52,6 @@ class Configuration {
         $this->branding = new Branding($this);
         $this->campaigns = new Campaigns($this);
         $this->tags = new Tags($this);
+        $this->automations = new Automations($this);
     }
 }
