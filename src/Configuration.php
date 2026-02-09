@@ -12,6 +12,7 @@ use m4l700\AcPhpWrapper\Api\Contacts\Contacts;
 use m4l700\AcPhpWrapper\Api\Templates\Templates;
 use m4l700\AcPhpWrapper\Api\Tags\Tags;
 use m4l700\AcPhpWrapper\Api\Ecommerce\Ecommerce;
+use m4l700\AcPhpWrapper\Api\Forms\Forms;
 use m4l700\AcPhpWrapper\Api\Messages\Messages;
 
 /**
@@ -36,6 +37,7 @@ class Configuration {
     public Tags $tags;
     public Automations $automations;
     public Messages $messages;
+    public Forms $forms;
 
     /**
      * @param string $apiUrl
@@ -56,5 +58,6 @@ class Configuration {
         $this->tags = new Tags($this);
         $this->automations = new Automations($this);
         $this->messages = new Messages($this);
+        $this->forms = new Forms($this);
     }
 }

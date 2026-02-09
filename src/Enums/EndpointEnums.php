@@ -30,4 +30,5 @@ class EndpointEnums
     const ECOMMERCE_PRODUCTS = '/api/'.self::API_VERSION.'/ecomOrderProducts';
     const AUTOMATIONS = '/api/'.self::API_VERSION.'/automations';
     const MESSAGES = '/api/'.self::API_VERSION.'/messages';
+    const FORMS = '/api/'.self::API_VERSION.'/forms';
 }
