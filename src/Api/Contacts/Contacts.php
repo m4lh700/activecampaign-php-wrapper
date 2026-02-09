@@ -141,6 +141,25 @@ class Contacts extends Api
 
     /**
      * @param int $contactId
+     * @param int $listId
+     * 
+     * @return array
+     */
+    public function addContactToList(int $contactId, int $listId): array
+    {
+        $url = $this->apiUrl . EndpointEnums::CONTACTS . EndpointEnums::CONTACT_LISTS;
+        $data = [
+            'contactList' => [
+                'contact' => $contactId,
+                'list' => $listId,
+                'status' => 1
+            ]
+        ];
+        return $this->connect(url: $url, method: MethodEnums::POST, data: $data);
+    }   
+
+    /**
+     * @param int $contactId
      * 
      * @return array
      */
