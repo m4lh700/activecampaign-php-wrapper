@@ -204,6 +204,67 @@ $products = $client->ecommerce->products->get();
 $product = $client->ecommerce->products->getById(12345);
 ```
 
+#### Automations
+
+```php
+// Get all automations
+$automations = $client->automations->get();
+
+// Get a single automation by ID
+$automation = $client->automations->getById(12345);
+```
+
+#### Forms
+
+```php
+// Get all forms
+$forms = $client->forms->get();
+
+// Get a single form by ID
+$form = $client->forms->getById(12345);
+
+// Update a form
+$form = $client->forms->update(12345, [
+    'form' => [
+        'name' => 'Updated Form Name'
+    ]
+]);
+
+// Delete a form
+$client->forms->delete(12345);
+```
+
+#### Messages
+
+```php
+// Get all messages
+$messages = $client->messages->get();
+
+// Get a single message by ID
+$message = $client->messages->getById(12345);
+
+// Create a new message
+$message = $client->messages->create([
+    'message' => [
+        'name' => 'My Email',
+        'fromname' => 'John Doe',
+        'fromemail' => 'john@example.com',
+        'subject' => 'Hello!',
+        'html' => '<p>Email content here</p>'
+    ]
+]);
+
+// Update a message
+$message = $client->messages->update(12345, [
+    'message' => [
+        'subject' => 'Updated Subject'
+    ]
+]);
+
+// Delete a message
+$client->messages->delete(12345);
+```
+
 ## API Reference
 
 ### Accounts
@@ -273,6 +334,32 @@ $product = $client->ecommerce->products->getById(12345);
 |--------|------------|-------------|
 | `get()` | none | Retrieve all products |
 | `getById(int $productId)` | `$productId` - Product ID | Retrieve a single product |
+
+### Automations
+
+| Method | Parameters | Description |
+|--------|------------|-------------|
+| `get()` | none | Retrieve all automations |
+| `getById(int $automationId)` | `$automationId` - Automation ID | Retrieve a single automation |
+
+### Forms
+
+| Method | Parameters | Description |
+|--------|------------|-------------|
+| `get()` | none | Retrieve all forms |
+| `getById(int $formId)` | `$formId` - Form ID | Retrieve a single form |
+| `update(int $formId, array $data)` | `$formId` - Form ID, `$data` - Form data array | Update a form |
+| `delete(int $formId)` | `$formId` - Form ID | Delete a form |
+
+### Messages
+
+| Method | Parameters | Description |
+|--------|------------|-------------|
+| `get()` | none | Retrieve all messages |
+| `getById(int $messageId)` | `$messageId` - Message ID | Retrieve a single message |
+| `create(array $data)` | `$data` - Message data array | Create a new message |
+| `update(int $messageId, array $data)` | `$messageId` - Message ID, `$data` - Message data array | Update a message |
+| `delete(int $messageId)` | `$messageId` - Message ID | Delete a message |
 
 ## License
 
