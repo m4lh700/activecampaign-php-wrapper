@@ -12,6 +12,7 @@ use m4l700\AcPhpWrapper\Api\Contacts\Contacts;
 use m4l700\AcPhpWrapper\Api\Templates\Templates;
 use m4l700\AcPhpWrapper\Api\Tags\Tags;
 use m4l700\AcPhpWrapper\Api\Ecommerce\Ecommerce;
+use m4l700\AcPhpWrapper\Api\Messages\Messages;
 
 /**
  * Configuration class for managing application settings, parameters and properties.
@@ -34,6 +35,7 @@ class Configuration {
     public Campaigns $campaigns;
     public Tags $tags;
     public Automations $automations;
+    public Messages $messages;
 
     /**
      * @param string $apiUrl
@@ -53,5 +55,6 @@ class Configuration {
         $this->campaigns = new Campaigns($this);
         $this->tags = new Tags($this);
         $this->automations = new Automations($this);
+        $this->messages = new Messages($this);
     }
 }
