@@ -40,6 +40,22 @@ class Configuration {
     public Forms $forms;
 
     /**
+     * @return string
+     */
+    public function getApiUrl(): string
+    {
+        return $this->apiUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
+    }
+
+    /**
      * @param string $apiUrl
      * @param string $apiKey
      */

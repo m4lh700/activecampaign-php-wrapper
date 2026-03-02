@@ -23,11 +23,4 @@ class ApiClient extends Configuration
         parent::__construct($apiUrl, $apiKey);
     }
 
-    /**
-     * @return string
-     */
-    public function getApiUrl(): string
-    {
-        return $this->apiUrl;
-    }
 }

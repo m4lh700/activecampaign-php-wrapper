@@ -21,8 +21,8 @@ class Api
 
     public function __construct(object $config)
     {
-        $this->apiUrl = $config->apiUrl;
-        $this->apiKey = $config->apiKey;
+        $this->apiUrl = $config->getApiUrl();
+        $this->apiKey = $config->getApiKey();
     }
 
     /**
