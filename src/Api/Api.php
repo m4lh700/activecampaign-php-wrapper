@@ -56,6 +56,20 @@ class Api
         
         $response = curl_exec($ch);
 
-        return json_decode($response, true);
+        if ($response === false) {                                                                                                              
+            $error = curl_error($ch);                                                                                                           
+            unset($ch);                                                                                                                    
+            throw new \Exception('cURL request failed: ' . $error);                                                                             
+        }                                                                                                                                       
+                                                                                                                                                
+        unset($ch);                                                                                                                        
+                                                                                                                                                
+        $decoded = json_decode($response, true);                                                                                                
+                                                                                                                                                
+        if ($decoded === null && json_last_error() !== JSON_ERROR_NONE) {                                                                       
+            throw new \Exception('Failed to decode JSON response: ' . json_last_error_msg());                                                   
+        }                                                                                                                                       
+                                                                                                                                                
+        return $decoded ?? []; 
     }
 }

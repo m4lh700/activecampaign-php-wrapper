@@ -13,6 +13,8 @@ class EndpointEnums
     const CONTACT_DATA = '/contactData';
     const CONTACT_LISTS = '/contactLists';
     const CONTACT_TAGS = '/contactTags';
+    const CONTACT_TAGS_ENDPOINT = '/api/'.self::API_VERSION.'/contactTags';
+    const CONTACT_LISTS_ENDPOINT = '/api/'.self::API_VERSION.'/contactLists';
     const CONTACT_LOGS = '/contactLogs';
     const CONTACT_FIELD_VALUES = '/fieldValues';
     const TEMPLATES = '/api/'.self::API_VERSION.'/templates';

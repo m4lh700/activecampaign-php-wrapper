@@ -34,6 +34,6 @@ class Products extends Api
     public function getById(int $productId): array
     {
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_PRODUCTS . '/' . $productId;
-        return $this->connect(url: $url, method: MethodEnums::POST);
+        return $this->connect(url: $url, method: MethodEnums::GET);
     }
 }

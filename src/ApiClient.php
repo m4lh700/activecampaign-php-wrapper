@@ -30,15 +30,4 @@ class ApiClient extends Configuration
     {
         return $this->apiUrl;
     }
-
-    /**
-     * @return array
-     */
-    public function getHeaders(): array
-    {
-        return [
-            'Api-Token: ' . $this->apiKey,
-            'Content-Type: application/json',
-        ];
-    }
 }

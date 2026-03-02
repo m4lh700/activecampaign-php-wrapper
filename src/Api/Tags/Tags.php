@@ -70,7 +70,7 @@ class Tags extends Api
      */
     public function addTagToContact(int $contactId, int $tagId): array
     {
-        $url = $this->apiUrl . EndpointEnums::CONTACT_TAGS;
+        $url = $this->apiUrl . EndpointEnums::CONTACT_TAGS_ENDPOINT;
 
         $data = [
             "contactTag" => [

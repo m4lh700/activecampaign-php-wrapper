@@ -54,7 +54,7 @@ class Connections extends Api
         ];
 
         $url = $this->apiUrl . EndpointEnums::ECOMMERCE_CONNECTIONS;
-        return $this->connect(url: $url, data: $data);
+        return $this->connect(url: $url, data: $data, method: MethodEnums::POST);
     }
 
     /**

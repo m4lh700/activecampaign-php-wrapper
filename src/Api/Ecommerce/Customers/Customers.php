@@ -12,7 +12,7 @@ use m4l700\AcPhpWrapper\Enums\MethodEnums;
 class Customers extends Api
 {
     /**
-     * @param int $customerId
+     * @param int $connectionId
      * @param int $externalId
      * @param string $email
      * @param bool $acceptsMarketing

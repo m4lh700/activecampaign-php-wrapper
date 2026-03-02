@@ -24,8 +24,8 @@ use m4l700\AcPhpWrapper\Api\Messages\Messages;
  * @author David Holleman
  */
 class Configuration {
-    public string $apiUrl;
-    public string $apiKey;
+    protected string $apiUrl;
+    protected string $apiKey;
     public Addresses $addresses;
     public Lists $lists;
     public Contacts $contacts;
