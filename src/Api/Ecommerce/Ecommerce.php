@@ -18,9 +18,9 @@ class Ecommerce extends Api
     public function __construct(object $config)
     {
         parent::__construct($config);
-        $this->customers = new Customers($this);
-        $this->connections = new Connections($this);
-        $this->orders = new Orders($this);
-        $this->products = new Products($this);
+        $this->customers = new Customers($config);
+        $this->connections = new Connections($config);
+        $this->orders = new Orders($config);
+        $this->products = new Products($config);
     }
 }
